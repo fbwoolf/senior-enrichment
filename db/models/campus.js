@@ -10,7 +10,7 @@ const Campus = db.define('campus', {
     },
     image: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
     }
 })
 

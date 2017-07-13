@@ -2,7 +2,7 @@
 
 const router = require('express').Router();
 const models = require('../../db/models');
-const Student = models.Student;
+const Campus = models.Campus;
 
 router.get('/', function (req, res, next) {
   Campus.findAll()
