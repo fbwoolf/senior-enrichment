@@ -14,6 +14,6 @@ Campus.hasMany(Student);
 
 module.exports = {
 	User,
-	Student,
-	Campus
+	Campus,
+	Student
 };

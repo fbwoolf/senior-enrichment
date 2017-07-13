@@ -1,8 +1,7 @@
 'use strict'
 
 const router = require('express').Router();
-const models = require('../../db/models');
-const Student = models.Student;
+const { Student } = require('../../db/models');
 
 router.get('/', function (req, res, next) {
   Student.findAll()

@@ -18,7 +18,7 @@ export default function reducer (campus = {}, action) {
     case SELECT_CAMPUS:
       return action.campus;
     default:
-      return state
+      return campus
   }
 }
 
