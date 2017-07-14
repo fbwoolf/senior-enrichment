@@ -7,19 +7,13 @@ import { Link, NavLink } from 'react-router-dom';
 const Navbar = (props) => {
 
 		return (
-			<nav className="navbar navbar-default">
-			  <div className="container">
-			    <div className="navbar-header">
-			      <Link to="/" className="navbar-brand">Home</Link>
-			    </div>
-			    <div className="collapse navbar-collapse">
-			      <ul className="nav navbar-nav">
-			      	<li><NavLink to="/campuses" activeClassName="active">Campuses</NavLink></li>
-			        <li><NavLink to="/students" activeClassName="active">Students</NavLink></li>
-			      </ul>
-			    </div>
-			  </div>
-			</nav>
+		  <div className="container">
+	      <ul className="nav justify-content-end">
+	      	<li className="nav-item"><NavLink to="/" className="nav-link">Home</NavLink></li>
+	      	<li className="nav-item"><NavLink to="/campuses" className="nav-link">Campuses</NavLink></li>
+	        <li className="nav-item"><NavLink to="/students" className="nav-link">Students</NavLink></li>
+	      </ul>
+		   </div>
 		)
 }
 

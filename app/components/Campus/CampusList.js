@@ -7,15 +7,13 @@ import CampusItem from './CampusItem';
 
 const CampusList = (props) => {
 
-	const { campuses } = props;
-
 		return (
 			<div className="container">
-				<div className="user-list">
+				<ul className="list-group">
 	        {
-	          props.campuses.map(campus => <CampusItem key={ campus.id }/>)
+	          props.campuses.map(campus => <CampusItem campus={ campus } key={ campus.id } />)
 	        }
-        </div>
+        </ul>
 			</div>
 		)
 }
