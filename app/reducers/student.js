@@ -2,32 +2,29 @@ import axios from 'axios';
 
 /* -----------------    ACTIONS     ------------------ */
 
-const SELECT_STUDENT = 'SELECT_STUDENT';
+const WRITE_NEW_STUDENT = 'WRITE_NEW_STUDENT';
 
 /* ------------   ACTION CREATORS     ------------------ */
 
-export function selectStudent (student) {
-  const action = { type: SELECT_STUDENT, student };
+export function writeNewStudent (student) {
+  const action = { type: WRITE_NEW_STUDENT, student };
   return action;
 }
 
 /* ------------       REDUCERS     ------------------ */
 
-export default function reducer (student = {}, action) {
+const initialState = {
+  name: '',
+  email: ''
+}
+
+export default function reducer (student = initialState, action) {
   switch (action.type) {
-    case SELECT_STUDENT:
+    case WRITE_NEW_STUDENT:
       return action.student;
     default:
       return student
   }
 }
-
-/* ------------   THUNK CREATORS     ------------------ */
-
-export const fetchStudent = (id) => dispatch => {
-  axios.get(`/api/students/${id}`)
-		.then(res => dispatch(selectStudent(res.data)))
-		.catch(err => console.error(`Fetching student: ${id} unsuccessful`, err));
-};
 
 

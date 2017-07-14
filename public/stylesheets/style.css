@@ -6,8 +6,16 @@ html, body {
 	height: 100%;
 }
 
+button {
+	margin-top: 15px;
+}
+
 .nav {
 	margin: 25px 0 25px 0;
+}
+
+a {
+	color: black;
 }
 
 /*#main {
@@ -47,3 +55,8 @@ ul {
 	height: 75px;
 	width: 100%;
 }
+
+.form-control {
+	width: 50%;
+}
+

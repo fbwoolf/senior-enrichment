@@ -11,7 +11,7 @@ const StudentList = (props) => {
 			<div className="container">
 				<div className="row heading">
 					<h3 className="display-5">STUDENT LIST</h3>
-					<Link to={ `/student/add` }>
+					<Link to={ `/students/add` }>
 						<i className="fa fa-plus fa-2x fa-pull-right"></i>
 					</Link>
 				</div>

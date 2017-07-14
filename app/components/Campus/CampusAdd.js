@@ -7,7 +7,7 @@ import { Link, NavLink } from 'react-router-dom';
 const CampusAdd = (props) => {
 
 		return (
-			<div>CampusAdd</div>
+			<div>NOT REQUIRED FOR MVP</div>
 		)
 }
 
