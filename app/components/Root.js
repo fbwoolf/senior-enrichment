@@ -3,11 +3,10 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 
 const Root = ({ children }) => (
-  <div id="main" className="container-fluid">
-    <Navbar />
-    { children }
-    <Footer />
-  </div>
+	<div id="main" className="container-fluid">
+		<Navbar />
+		{ children }
+	</div>
 );
 
 export default Root;

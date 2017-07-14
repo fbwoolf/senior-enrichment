@@ -7,15 +7,21 @@ import StudentItem from './StudentItem';
 
 const StudentList = (props) => {
 
-	const { campuses } = props;
-
 		return (
 			<div className="container">
-				<div className="user-list">
-	        {
-	          props.students.map(student => <StudentItem />)
-	        }
-        </div>
+				<div className="row heading">
+					<h3 className="display-5">STUDENT LIST</h3>
+					<Link to={ `/student/add` }>
+						<i className="fa fa-plus fa-2x fa-pull-right"></i>
+					</Link>
+				</div>
+				<div className="row">
+					<ul className="user-list">
+		        {
+		          props.students.map(student => <StudentItem student={ student } key={ student.id } />)
+		        }
+	        </ul>
+	      </div>
 			</div>
 		)
 }

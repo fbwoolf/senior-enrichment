@@ -8,9 +8,7 @@ const Footer = (props) => {
 
 		return (
 			<div className="footer text-center">
-		    <div className="vcenter muted">
-		      <span>Margaret Hamilton Interplanetary Academy of JavaScript</span>
-		    </div>
+		  	<span>Margaret Hamilton Interplanetary Academy of JavaScript</span>
   		</div>
 		)
 }
