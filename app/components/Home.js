@@ -7,7 +7,15 @@ import { Link, NavLink } from 'react-router-dom';
 const Home = (props) => {
 
 		return (
-			<div></div>
+			<div className="container">
+				<div className="row">
+					<div className="col"></div>
+						<div className="col-6 home-page"> 
+			          <h3>WELCOME TO MARGARET HAMILTON INTERPLANETARY ACADEMY OF JAVASCRIPT</h3>
+			     	</div>
+			    <div className="col"></div>
+			  </div>
+		  </div>
 		)
 }
 

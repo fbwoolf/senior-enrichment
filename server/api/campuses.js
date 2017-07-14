@@ -10,7 +10,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.param('campusId', function (req, res, next, id) {
-  Student.findById(id)
+  Campus.findById(id)
   .then(campus => {
     if (!campus) {
       const err = Error('Campus not found');
