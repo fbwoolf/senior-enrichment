@@ -22,6 +22,10 @@ h3 {
 	width: 95%;
 }
 
+.btn-submit {
+	margin-top: 25px;
+}
+
 .btn-remove {
 	border: none;
 	background: none;

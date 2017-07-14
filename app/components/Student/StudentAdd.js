@@ -7,14 +7,12 @@ import { postStudent } from '../../reducers/students';
 
 class StudentAdd extends Component {
 
-	//const { handleSubmit } = props;
-
 	constructor(props) {
 		super(props)
 		this.state = {
 			name: '',
 			email: '',
-			campusIs: 1
+			campusId: 1
 		}
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
@@ -38,7 +36,16 @@ class StudentAdd extends Component {
 	  			<label>EMAIL</label>
 	  			<input name="email" type="text" className="form-control" id="form-field" aria-describedby="emailHelp" placeholder="Please enter a valid email address."></input>
 				</div>
-				<button type="submit" className="btn btn-primary">SUBMIT</button>
+				<div className="form-group">
+			    <label>CAMPUS</label>
+			    <select name="select" className="form-control" id="select-dropdown">
+			    	<option value="0">Select your campus...</option>
+			      { 
+			      	this.props.campuses.map(campus => <option value={ campus.id } key={ campus.id }>{ campus.name }</option>)
+		        }
+			    </select>
+  			</div>
+				<button type="submit" className="btn btn-primary btn-submit">SUBMIT</button>
 	  	</form>
 		)
 	}	
@@ -48,18 +55,19 @@ class StudentAdd extends Component {
 		const student = {
 			name: event.target.name.value,
 			email: event.target.email.value,
-			campusId: 1
+			campusId: event.target.select.value
 		};
 		this.props.postStudent(student);
 		// clear inputs
     event.target.name.value = '';
     event.target.email.value = '';
+    event.target.select.value = 0;
 	}
 }
 
 /* -----------------    CONTAINER     ------------------ */
 
-const mapState = null;
+const mapState = ({ campuses }) => ({ campuses });
 const mapDispatch = { postStudent };
 
 export default connect(mapState, mapDispatch)(StudentAdd);

@@ -2,12 +2,24 @@ import axios from 'axios';
 
 /* -----------------    ACTIONS     ------------------ */
 
-const SELECT_CAMPUS = 'SELECT_CAMPUS';
+const WRITE_CAMPUS_NAME = 'WRITE_CAMPUS_NAME';
+const WRITE_CAMPUS_IMAGE = 'WRITE_CAMPUS_IMAGE';
+const REMOVE_CAMPUS_STUDENT = 'REMOVE_CAMPUS_STUDENT';
 
 /* ------------   ACTION CREATORS     ------------------ */
 
-export function selectCampus (campus) {
-  const action = { type: SELECT_CAMPUS, campus };
+export function writeCampusName (campus) {
+  const action = { type: WRITE_CAMPUS_NAME, campus };
+  return action;
+}
+
+export function writeCampusImage (campus) {
+  const action = { type: WRITE_CAMPUS_IMAGE, campus };
+  return action;
+}
+
+export function removeCampusStudent (campus) {
+  const action = { type: REMOVE_CAMPUS_STUDENT, campus };
   return action;
 }
 
@@ -15,17 +27,13 @@ export function selectCampus (campus) {
 
 export default function reducer (campus = {}, action) {
   switch (action.type) {
-    case SELECT_CAMPUS:
+    case WRITE_CAMPUS_NAME:
+      return action.campus;
+    case WRITE_CAMPUS_IMAGE:
+      return action.campus;
+    case REMOVE_CAMPUS_STUDENT:
       return action.campus;
     default:
       return campus
   }
 }
-
-/* ------------   THUNK CREATORS     ------------------ */
-
-export const fetchCampus = (id) => dispatch => {
-  axios.get(`/api/campuses/${id}`)
-		.then(res => dispatch(selectCampus(res.data)))
-		.catch(err => console.error(`Fetching campus: ${id} unsuccessful`, err));
-};
