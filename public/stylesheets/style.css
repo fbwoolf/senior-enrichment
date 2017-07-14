@@ -6,16 +6,25 @@ html, body {
 	height: 100%;
 }
 
-button {
-	margin-top: 15px;
-}
-
 .nav {
 	margin: 25px 0 25px 0;
 }
 
 a {
 	color: black;
+}
+
+h3 {
+	margin-bottom: 0;
+}
+
+.student-name {
+	width: 95%;
+}
+
+.btn-remove {
+	border: none;
+	background: none;
 }
 
 /*#main {

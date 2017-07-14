@@ -62,19 +62,4 @@ class StudentAdd extends Component {
 const mapState = null;
 const mapDispatch = { postStudent };
 
-// const mapDispatch = dispatch => ({
-// 	handleSubmit: (event) => {
-// 	  event.preventDefault();
-// 		const student = {
-// 			name: event.target.name.value,
-// 			email: event.target.email.value
-// 		};
-// 		dispatch(addStudent(student));
-// 		// clear inputs
-// 	  event.target.name.value = '';
-// 	  event.target.email.value = '';
-// 	  event.target.phone.value = '';
-// 	}
-// });
-
 export default connect(mapState, mapDispatch)(StudentAdd);
